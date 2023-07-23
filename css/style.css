@@ -1,0 +1,744 @@
+
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Josefin+Sans, Open+Sans, sans-serif;
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* li {
+    list-style: none;
+} */
+
+.section-heading {
+    font-size: 5rem;
+    margin: 8rem 0 5rem 0;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    border: 5rem 0;
+    border-bottom: 0.1rem solid #333;
+    text-shadow: 0.2rem 0.2rem 0.5rem #555;
+} 
+
+.form {
+    width: 100%;
+    max-width: 400px;
+    padding: 4rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid #333;
+    border-radius: 2rem;
+    background-color: beige;
+    box-shadow: 0.3rem 0.3rem 0.5rem #333;
+}
+
+.form-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    line-height: 2;
+    border-radius: 7px;
+}
+
+.form-button {
+    background-color: #1ca8e4;
+    color: #fff;
+    width: auto;
+    height: auto;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    border: 0.3rem solid #555;
+    border-radius: 25px;
+}
+
+/*  End of Global Styles */
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+
+.logo {
+    width: 4rem;
+    border-radius: 50%;
+    justify-content: start;
+    margin: 0.5rem 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    background-color: #fff;
+    width: 15rem;
+    margin: 0 3rem;
+    text-transform: uppercase;
+    border: 0.1rem solid #333;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem #555;
+    text-align: center;
+    padding: 0.2rem 0;
+    letter-spacing: 0.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-item::before {
+    content: " ";
+    position: absolute;
+    width: 150%;
+    height: 5rem;
+    background-color: #1ca8e4;
+    left: -20%;
+    transform: rotate(-40deg)translateX(-4rem);
+    transform-origin: left bottom;
+    opacity: 0.8;
+    transition: left 0.8s;
+}
+
+.nav-item:hover::before {
+    left: 110%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background-color: #333;
+}
+
+/* End of Navbar */
+
+
+/* Section 1 Landing Page */
+
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url(../images/portfolio-bg-image.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-1-heading {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #1ca8e4;
+    padding: 0 3rem;
+    /* margin-bottom: 5rem; */
+    margin: 6rem 0 5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    border-bottom: .3rem solid #fff;
+    text-shadow: 0.2rem 0.2rem 1rem #555;
+    transform: skew(-10deg);
+}
+
+.my-image {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.5rem solid #1ca8e4;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding: 0.5rem;
+    opacity: 0.9;
+    
+}
+
+.my-image-description {
+    font-size: 2rem;
+    color: #fff;
+    background-color: #1ca8e4;
+    margin: 5rem 0;
+    padding: 0.5rem 3rem;
+    letter-spacing: 0.3rem;
+    transform: skew(-10deg);
+}
+
+.section-1-button {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    background-color: #fff;
+    width: 30rem;
+    margin: 0 3rem;
+    text-transform: uppercase;
+    border: 0.3rem solid #1ca8e4;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem #555;
+    text-align: center;
+    padding: 0.3rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+/*  End of Section-1 */
+
+
+/*  Section-2 Projects */
+
+.section-2 {
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-wrapper {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: rgb(244, 244, 233);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem 5rem 2rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem #333;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.project:hover {
+    box-shadow: 1.5rem 1.5rem 2rem #333;
+    transform: scale(1.1);
+}
+
+.project-img {
+    width: 30rem;
+}
+
+.project-name {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+.project-built-using {
+    padding: 0 0 1rem 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.project-link {
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border: solid 0.3rem #1ca8e4;
+    border-radius: 1rem;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+
+.section-1-btn {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #333;
+    background-color: #fff;
+    border: 0.3rem solid #1ca8e4;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+/*  End of Section-2 */
+
+/* Section-3 Signup Form */
+
+.section-3 {
+    width: 100%;
+    height: auto;
+    background-color: #1ca8e4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* End of Section-3 */
+
+
+/* Section-4 About */
+
+.section-4 {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-my-skills-heading {
+    width: 70%;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+.about-my-skills-comment {
+    width: 70%;
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+}
+
+.skills-wrapper {
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.skills {
+    color: orangered;
+    /* background-color: rgb(244, 244, 233); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem 5rem 2rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem #333;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.skills:hover {
+    box-shadow: 1.5rem 1.5rem 2rem #333;
+    transform: scale(1.1);
+}
+
+.skills-images {
+    width: 15rem;
+    height: auto;
+}
+
+.skills-name {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+/* End of Section-4 */
+
+
+/* Section-5 Contact Form */
+
+.section-5 {
+    width: 100%;
+    height: auto;
+    background-color: lightcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* End of Section-5 */
+
+/* Footer */
+
+.footer {
+    flex-direction: column;
+    width: 100%;
+    height: 8rem;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.logo-attribution {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+/* End of Footer */
+
+
+/* Site Responsiveness - jQuery */
+
+@media (max-width: 1024px) {
+    .section-heading {
+        font-size: 4.5rem;
+        margin: 7rem 0 5rem 0;
+    }
+
+    .nav-item {
+        font-size: 1.4rem;
+        width: 11rem;
+        margin: 0 2rem;
+    }
+
+    .nav-item::before {
+        left: -30%;
+    }
+
+    .section-1-heading {
+        font-size: 5rem;
+        font-weight: 600;
+    }
+
+    .my-image {
+        width: 24rem;
+        height: 24rem;
+    }
+
+    .project-img {
+        width: 28rem;
+    }
+
+    .form {
+        max-width: 350px;
+        padding: 3rem;
+    }
+
+    .form-heading {
+        font-size: 3rem;
+    }
+
+    .form-control {
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .skills-images {
+        width: 13rem;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .section-heading {
+        font-size: 3.3rem;
+        margin: 7rem 0 4rem 0;
+    }
+
+    .logo {
+        width: 3.5rem;
+    }
+
+    /* .nav-item {
+        font-size: 1.3rem;
+        width: 9rem;
+        margin: 0 1.5rem;
+    }
+
+    .nav-item::before {
+        left: -40%;
+    } */
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: whitesmoke;
+        width: 100%;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .section-1-heading {
+        font-size: 3.5rem;
+        font-weight: 600;
+    }
+
+    .my-image {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .my-image-description {
+        font-size: 1.7rem;
+    }
+
+    .form {
+        max-width: 300px;
+        padding: 2rem;
+    }
+
+    .form-heading {
+        font-size: 2.5rem;
+    }
+
+    .form-control {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+
+    .about-my-skills-heading {
+        margin-bottom: 3.5rem;
+        font-size: 2.5rem;
+    }
+
+    .about-my-skills-comment {
+        margin-bottom: 3.5rem;
+        font-size: 1.6rem;
+    }
+
+    .footer {
+        height: 6.5rem;
+    }
+
+    .copyright {
+        font-size: 1.7rem;
+    }
+
+    .logo-attribution {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 625px) {
+    .section-heading {
+        font-size: 2.8rem;
+        margin: 6rem 0 3rem 0;
+    }
+
+    .logo {
+        width: 3rem;
+    }
+
+    .nav-item {
+        font-size: 1.3rem;
+        width: 9rem;
+        margin: 0 1.5rem;
+    }
+
+    .nav-item::before {
+        left: -40%;
+    }
+
+    .section-1-heading {
+        font-size: 2.6rem;
+        font-weight: 500;
+    }
+
+    .my-image {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .my-image-description {
+        font-size: 1.5rem;
+    }
+
+    .form {
+        max-width: 250px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .section-heading {
+        font-size: 2rem;
+        margin: 6rem 0 3rem 0;
+    }
+
+    .logo {
+        width: 2.5rem;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+        width: 9rem;
+        margin: 0 1.5rem;
+    }
+
+    .nav-link::before {
+        left: -40%;
+    }
+
+    .section-1-heading {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    .my-image {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    .my-image-description {
+        font-size: 1.2rem;
+    }
+
+    .form {
+        max-width: 250px;
+    }
+
+    .form-heading {
+        font-size: 2rem;
+    }
+
+    .form-control {
+        font-size: 1.1rem;
+        line-height: 1.2;
+    }
+
+    .form-button {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .about-my-skills-heading {
+        margin-bottom: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .about-my-skills-comment {
+        margin-bottom: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .copyright {
+        font-size: 1.5rem;
+    }
+
+    .logo-attribution {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .section-heading {
+        font-size: 1.5rem;
+        margin: 6rem 0 3rem 0;
+    }
+
+    .logo {
+        width: 2.5rem;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+        width: 9rem;
+        margin: 0 1.5rem;
+    }
+
+    .nav-link::before {
+        left: -40%;
+    }
+
+    .section-1-heading {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .my-image {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .my-image-description {
+        font-size: 1rem;
+    }
+
+    .form {
+        max-width: 250px;
+    }
+
+}
+
+/* End of Site Responsiveness - jQuery */
+
+
+
